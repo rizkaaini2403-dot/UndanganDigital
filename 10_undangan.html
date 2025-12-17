@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Pernikahan Jawa – Megah & Elegan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+/* ======================================
+    GLOBAL STYLE & COLORS
+======================================*/
+:root {
+    --primary-color: #7b4a25; /* Cokelat Tua */
+    --secondary-color: #b88960; /* Cokelat Emas */
+    --background-light: #f6f2e9; /* Krem Muda */
+    --font-dark: #4a3628; /* Cokelat Gelap */
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-light);
+    overflow-x: hidden;
+    color: var(--font-dark);
+    text-align: center; /* Pindahkan semua teks ke tengah secara default */
+}
+
+/* Utilitas */
+.text-center { text-align: center; }
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    padding: 20px 0; /* Padding vertikal untuk pemisah antar bagian */
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Batik Background */
+.batik-bg {
+    position: fixed;
+    inset: 0;
+    /* Ganti URL batik agar lebih jelas dan elegan */
+    background-image: url('https://tse1.mm.bing.net/th/id/OIP.ydH8LW7Kpm4QeTWSG2ut3wHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3'); 
+    opacity: .2; /* Sedikit lebih gelap agar motif lebih terlihat */
+    background-size: 180px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ======================================
+    HEADER – EFEK MEGAH
+======================================*/
+header {
+    height: 100vh;
+    position: relative;
+    /* Ganti URL background yang lebih elegan & bertema Jawa */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('httphttps://static.vecteezy.com/system/resources/previews/002/821/336/original/batik-background-concept-free-vector.jpgs://i.imgur.com/8Qp4R3T.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,.5);
+    z-index: 1;
+}
+
+/* Awan Jawa - Efek Mega */
+.header-cloud {
+    position: absolute;
+    top: 0;
+    width: 200%;
+    height: 180px;
+    /* Ganti gambar awan untuk estetika yang lebih baik */
+    background: url('https://img.inews.co.id/media/600/files/inews_new/2022/02/15/ilustrasi_wayang_kulit.jpg') repeat-x bottom;
+    background-size: contain;
+    animation: cloudMove 50s linear infinite;
+    opacity: .3;
+    z-index: 2;
+}
+@keyframes cloudMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Lentera Jawa */
+.lentera {
+    position: absolute;
+    width: 150px;
+    z-index: 3;
+    animation: goyang 2.6s ease-in-out infinite alternate;
+}
+@keyframes goyang {
+    from { transform: rotate(-4deg) scale(1) }
+    to { transform: rotate(4deg) scale(1.05) }
+}
+
+/* Wayang kiri & kanan */
+.wayang {
+    position: absolute;
+    bottom: 0;
+    width: 260px;
+    opacity: .35;
+    z-index: 1;
+    animation: wayangAnim 8s ease-in-out infinite alternate;
+}
+@keyframes wayangAnim {
+    from { transform: translateY(-10px) }
+    to { transform: translateY(10px) }
+}
+
+
+header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem; /* Lebih besar */
+    margin-bottom: 5px;
+}
+header p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ======================================
+    MUSIK BUTTON
+======================================*/
+#musicBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%; /* Bulat */
+    cursor: pointer;
+    z-index: 999999;
+    box-shadow: 0 4px 12px rgba(0,0,0,.4);
+    transition: .3s;
+    font-size: 1.2rem;
+}
+#musicBtn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* ======================================
+    MEMPELAI
+======================================*/
+.section-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin: 40px 0 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.1);
+}
+
+.couple {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Jarak lebih besar */
+    padding: 30px 20px;
+}
+.person {
+    width: 300px; /* Lebih lebar */
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+.person img {
+    width: 100%;
+    height: 300px; /* Biar foto seragam */
+    object-fit: cover;
+    border-radius: 50%; /* Bentuk Lingkaran */
+    border: 6px solid var(--secondary-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+.person h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin: 15px 0 5px;
+    color: var(--primary-color);
+}
+.ampersand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    color: var(--secondary-color);
+    line-height: 1;
+    align-self: center; /* Memposisikan & di tengah vertikal */
+}
+
+/* ======================================
+    INFORMASI ACARA
+======================================*/
+.info-container {
+    padding: 0 20px;
+}
+.info-box {
+    background: white;
+    margin: 30px auto;
+    max-width: 650px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.1);
+    border-left: 8px solid var(--secondary-color);
+}
+.info-box h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+.info-box p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+iframe {
+    width: 90%;
+    max-width: 650px;
+    height: 300px;
+    border-radius: 12px; 
+    border: 1px solid #ddd;
+    margin-bottom: 40px;
+}
+
+/* ======================================
+    GALERI
+======================================*/
+.gallery {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); /* Kolom lebih besar */
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+    transition: .4s;
+}
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+/* ======================================
+    KIRIM HADIAH
+======================================*/
+.gift-box {
+    background: var(--background-light);
+    max-width: 550px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 4px dashed var(--secondary-color);
+    box-shadow: inset 0 0 10px rgba(184, 137, 96, 0.4);
+}
+.gift-box h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+.gift-box p {
+    font-size: 1.1rem;
+}
+.gift-box b {
+    display: block;
+    padding: 8px;
+    background: #fff;
+    border-radius: 8px;
+    margin: 10px 0;
+    border: 1px solid #e0d8c9;
+}
+
+/* ======================================
+    KIRIM UCAPAN
+======================================*/
+form {
+    max-width: 550px;
+    margin: 40px auto 80px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.1);
+}
+form input, form textarea {
+    width: 100%;
+    padding: 15px; /* Padding lebih besar */
+    border-radius: 10px;
+    background: #fff8f5;
+    border: 1px solid var(--secondary-color);
+    margin-top: 15px;
+    box-sizing: border-box; /* Penting untuk padding */
+    font-size: 1rem;
+    color: var(--font-dark);
+}
+form button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: .3s;
+}
+form button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* ======================================
+    MEDIA QUERIES (Responsif)
+======================================*/
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 4rem;
+    }
+    header p {
+        font-size: 1.1rem;
+    }
+    .section-title {
+        font-size: 3rem;
+    }
+    .wayang, .lentera {
+        width: 180px;
+    }
+    .couple {
+        flex-direction: column;
+        align-items: center;
+    }
+    .person {
+        width: 90%;
+        max-width: 300px;
+    }
+    .person img {
+        height: 250px;
+    }
+    .ampersand {
+        display: none; /* Sembunyikan simbol & di mobile */
+    }
+    .gallery {
+        grid-template-columns: 1fr 1fr; /* 2 kolom di mobile */
+    }
+    .info-box h2 {
+        font-size: 2.5rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="batik-bg"></div>
+
+<audio id="gamelan" loop>
+    <source src="kebo-giro.mp3.mp3" type="audio/mp3">
+</audio>
+
+<button id="musicBtn" aria-label="Putar/Hentikan Musik"><i class="fas fa-music"></i></button>
+
+<script>
+let music = document.getElementById("gamelan");
+let btn = document.getElementById("musicBtn");
+let playing = false;
+
+// Fungsi untuk mulai/hentikan musik
+function toggleMusic() {
+    if (!playing) {
+        music.play().catch(error => {
+            console.log("Play failed, user interaction needed:", error);
+            // Tambahkan notifikasi jika gagal putar otomatis
+        });
+        btn.innerHTML = '<i class="fas fa-pause"></i>';
+        playing = true;
+    } else {
+        music.pause();
+        btn.innerHTML = '<i class="fas fa-music"></i>';
+        playing = false;
+    }
+}
+
+// Hanya mulai musik saat interaksi pertama (untuk kompatibilitas browser)
+btn.onclick = toggleMusic;
+
+// Animasi Fade In untuk semua section
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll('.fade-in');
+    sections.forEach(section => {
+        // Berikan delay berdasarkan urutan
+        const delay = section.dataset.delay || 0;
+        section.style.animationDelay = delay + 'ms';
+        section.classList.remove('fade-in'); // Hapus class asli jika ada
+        section.classList.add('fade-in'); // Terapkan lagi untuk memicu animasi
+    });
+});
+</script>
+
+<header class="fade-in">
+    <div class="header-cloud"></div>
+
+    <img src="https://png.pngtree.com/png-clipart/20220928/original/pngtree-pernikahan-jawa-couple-indonesia-vector-free-download-png-image_8640773.png" class="lentera" style="left:15%; top:15%">
+    <img src="https://png.pngtree.com/png-clipart/20220928/original/pngtree-pernikahan-jawa-couple-indonesia-vector-free-download-png-image_8640773.png" class="lentera" style="right:15%; top:18%">
+
+    <img src="https://i.pinimg.com/736x/fa/31/d7/fa31d7c7845aa910ec6aed6a46f97387.jpg" class="wayang" style="left:3%; width: 220px;">
+    <img src="https://i.pinimg.com/736x/fa/31/d7/fa31d7c7845aa910ec6aed6a46f97387.jpg" class="wayang" style="right:3%; width: 220px; transform:scaleX(-1)">
+
+    <p>Undangan Pernikahan</p>
+    <h1>Aulia & Rizky</h1>
+    <p>30 JUNI 2026</p>
+</header>
+
+<section class="fade-in" data-delay="500">
+    <h2 class="section-title">Pasangan Mempelai</h2>
+
+    <div class="couple">
+
+        <div class="person">
+            <img src="https://i.pinimg.com/736x/30/1b/bb/301bbb12e82101ddbbfe32367d19e7f2.jpg" alt="Mempelai Wanita">
+            <h3>Aulia Salsabila</h3>
+            <p>Putri Tercinta dari:</p>
+            <p>Bapak oji & Ibu alya </p>
+        </div>
+
+        <div class="ampersand">&</div>
+
+        <div class="person">
+            <img src="https://i.pinimg.com/736x/59/01/00/590100662c365c931ecf6efdafe8d229.jpg" alt="Mempelai Pria">
+            <h3>Rizky Pratama</h3>
+            <p>Putra Tercinta dari:</p>
+            <p>Bapak Hadi & Ibu Bila </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="fade-in info-container" data-delay="1000">
+    <h2 class="section-title">Detail Acara</h2>
+
+    <div class="info-box text-center">
+        <h2> Akad Nikah</h2>
+        <p><b>Rabu, 30 Juni 2026</b></p>
+        <p>Pukul 08.00 WIB</p>
+        <p>[Rumah Mempelai Wanita]</p>
+        <p>Griya Praja</p>
+    </div>
+
+    <div class="info-box text-center">
+        <h2> Resepsi Pernikahan</h2>
+        <p><b>Rabu, 30 Juni 2026</b></p>
+        <p>Pukul 11.00 – 16.00 WIB</p>
+        <p>[Rumah Mempelai wanita]</p>
+        <p>Griya Praja</p>
+    </div>
+
+    <iframe src="https://www.google.com/maps?q=Griya+Praja&output=embed"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<section class="fade-in" data-delay="1500">
+    <h2 class="section-title">Galeri Kebahagiaan</h2>
+
+    <div class="gallery">
+        <img src="https://i.pinimg.com/736x/53/ef/a5/53efa50e89651c9aea5620a05ef0e03d.jpg" alt="Prewedding 1">
+        <img src="https://i.pinimg.com/1200x/a8/34/5b/a8345b6bb32a36c17cd029bd90c73024.jpg" alt="Prewedding 2">
+        <img src="https://i.pinimg.com/1200x/51/e5/46/51e546ac1f1cdc2c5ecbfbabcc990a16.jpg" alt="Prewedding 3">
+        <img src="https://i.pinimg.com/736x/4c/e3/f4/4ce3f4202905fe6618c1023779e8ab7f.jpg" alt="Prewedding 4">
+    </div>
+</section>
+
+<section class="fade-in" data-delay="2000">
+    <h2 class="section-title">Doa & Restu</h2>
+    <div class="gift-box">
+        <h3>Kirim Hadiah (Tanda Kasih)</h3>
+        <p>Dengan tanpa mengurangi rasa hormat, bagi Anda yang ingin memberikan tanda kasih dapat melalui:</p>
+        <p><b>Bank BCA: 123456789 (a.n. Aulia Salsabila)</b></p>
+        <p><b>DANA / OVO: 0812-3213-2244</b></p>
+        <p class="small">*Mohon konfirmasi setelah transfer*</p>
+    </div>
+</section>
+
+<section class="fade-in" data-delay="2500">
+    <h2 class="section-title">Kirim Ucapan & Kehadiran</h2>
+
+    <form>
+        <input type="text" placeholder="Nama Anda" required>
+        <textarea placeholder="Tulis ucapan terbaik dan konfirmasi kehadiran Anda..." rows="5" required></textarea>
+        <button type="submit">Kirim Ucapan & Konfirmasi Kehadiran</button>
+    </form>
+</section>
+
+</body>
+</html>
